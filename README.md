@@ -40,7 +40,7 @@ Across **GAN, diffusion, flow, and 3D foundation models**, LS² consistently imp
   <img src="visualization.png" width="90%">
 </p>
 
-# 💭 LS2 Demo
+# 💭 LS² Demo
 
 ## Requirements
 
