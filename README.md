@@ -40,9 +40,9 @@ Across **GAN, diffusion, flow, and 3D foundation models**, LS² consistently imp
   <img src="visualization.png" width="90%">
 </p>
 
-# 💭 LS² demo
+## 💭 LS² demo
 
-## Requirements
+### Requirements
 
 - Python 3.8+
 
@@ -50,7 +50,7 @@ Across **GAN, diffusion, flow, and 3D foundation models**, LS² consistently imp
 pip install -r requirements.txt
 ```
 
-## Data
+### Data
 
 Sample DICOM slices are included:
 
@@ -62,7 +62,7 @@ Sample DICOM slices are included:
 
 HU values are clipped to `[-1000, 1000]` and linearly mapped to `[-1, 1]`. Images are resized to `256×256` (nearest-neighbor for the mask).
 
-## Run
+### Run
 
 From this directory:
 
