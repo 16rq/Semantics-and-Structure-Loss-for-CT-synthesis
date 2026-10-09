@@ -39,3 +39,42 @@ Across **GAN, diffusion, flow, and 3D foundation models**, LS² consistently imp
 <p align="center">
   <img src="visualization.png" width="90%">
 </p>
+
+# 💭 LS2 Demo
+
+## Requirements
+
+- Python 3.8+
+
+```bash
+pip install -r requirements.txt
+```
+
+## Data
+
+Sample DICOM slices are included:
+
+| File | Role |
+|------|------|
+| `ct_0b57b247b6_42966_00066.dcm` | Ground-truth CT (AutoPET) |
+| `pred_0b57b247b6_42966_00066.dcm` | Predicted / fake CT (demo pair) |
+| `AutoPET_0b57b247b6_42966_00066.dcm` | Organ / region label map |
+
+HU values are clipped to `[-1000, 1000]` and linearly mapped to `[-1, 1]`. Images are resized to `256×256` (nearest-neighbor for the mask).
+
+## Run
+
+From this directory:
+
+```bash
+python demo.py
+```
+
+Custom inputs:
+
+```bash
+python demo.py \
+  --real /path/to/real_ct.dcm \
+  --pred /path/to/pred_ct.dcm \
+  --mask /path/to/mask.dcm
+```
